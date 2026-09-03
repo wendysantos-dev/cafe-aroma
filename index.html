@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Faz o layout se adaptar à largura do dispositivo. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Café Aroma - cafés especiais e momentos que ficam.">
+
+  <title>Café Aroma | Início</title>
+
+  <!-- Conectamos o HTML ao nosso arquivo CSS. -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+<header class="header">
+  <div class="container navbar">
+
+    <!-- Logo do projeto -->
+    <a href="index.html" class="logo" aria-label="Café Aroma - página inicial">
+      ☕ CAFÉ AROMA
+    </a>
+
+    <!-- Navegação principal -->
+    <nav aria-label="Navegação principal">
+      <ul class="nav-list" id="main-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="pages/sobre.html">Sobre nós</a></li>
+        <li><a href="pages/cardapio.html">Cardápio</a></li>
+        <li><a href="pages/lojas.html">Lojas</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
+        <li><a href="pages/contato.html">Contato</a></li>
+        <li><a class="btn btn-primary" href="pages/cardapio.html">Peça agora</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botão de menu usado em telas pequenas -->
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      aria-controls="main-menu"
+      aria-expanded="false"
+      aria-label="Abrir menu">
+      ☰
+    </button>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO: primeira área visual da página -->
+  <section class="hero">
+    <div class="container hero-content">
+
+      <span class="eyebrow">Feito para você, todos os dias</span>
+
+      <h1>Mais que café, momentos que ficam.</h1>
+
+      <p>
+        Cafés especiais, preparados com carinho para transformar
+        o seu dia em uma experiência especial.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="pages/cardapio.html">
+          Conheça o cardápio
+        </a>
+
+        <a class="btn btn-outline" style="color:white; border-color:white;" href="pages/lojas.html">
+          Encontre uma loja
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="container features" aria-label="Diferenciais">
+
+    <article class="feature">
+      <div class="feature-icon">☕</div>
+      <h3>Grãos selecionados</h3>
+      <p>Cafés especiais de origem selecionada.</p>
+    </article>
+
+    <article class="feature">
+      <div class="feature-icon">♡</div>
+      <h3>Feito com carinho</h3>
+      <p>Cada bebida preparada com atenção.</p>
+    </article>
+
+    <article class="feature">
+      <div class="feature-icon">✦</div>
+      <h3>Qualidade premium</h3>
+      <p>Ingredientes de qualidade em cada preparo.</p>
+    </article>
+
+    <article class="feature">
+      <div class="feature-icon">⌂</div>
+      <h3>Ambiente acolhedor</h3>
+      <p>Um espaço pensado para você.</p>
+    </article>
+
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section">
+
+    <div class="container split">
+      <div class="visual-placeholder">
+      </div>
+
+      <div>
+        <span class="eyebrow">Uma pausa para você</span>
+
+        <h2>O café também pode ser um momento.</h2>
+
+        <p>
+          Do primeiro aroma ao último gole, criamos uma experiência
+          acolhedora para quem gosta de desacelerar, conversar
+          e apreciar um bom café.
+        </p>
+
+        <br>
+
+        <a class="btn btn-primary" href="pages/sobre.html">
+          Conheça nossa história
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span class="eyebrow">Nossos cafés</span>
+        <h2>Os favoritos da casa</h2>
+        <p>Algumas das opções mais pedidas pelos nossos clientes.</p>
+      </div>
+
+      <div class="grid-4">
+
+        <article class="card">
+          <div id="product-express"></div>
+          <div class="card-content">
+            <h3>Expresso</h3>
+            <p>Tradicional e encorpado.</p>
+            <span class="price">R$ 6,50</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div id="product-capuccino"></div>
+          <div class="card-content">
+            <h3>Cappuccino</h3>
+            <p>Café, leite e espuma cremosa.</p>
+            <span class="price">R$ 9,50</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div id="product-cold"></div>
+          <div class="card-content">
+            <h3>Cold Brew</h3>
+            <p>Refrescante e suave.</p>
+            <span class="price">R$ 12,50</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div id="product-mocha"></div>
+          <div class="card-content">
+            <h3>Mocha</h3>
+            <p>Café com chocolate.</p>
+            <span class="price">R$ 11,50</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="text-align:center; margin-top:35px;">
+        <a class="btn btn-primary" href="pages/cardapio.html">
+          Ver cardápio completo
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>Seu próximo café está esperando.</h2>
+
+      <a class="btn btn-primary" href="pages/cardapio.html">
+        Peça agora
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h3>☕ Café Aroma</h3>
+      <p>Mais que café, momentos que ficam.</p>
+    </div>
+
+    <div>
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="pages/sobre.html">Sobre nós</a></li>
+        <li><a href="pages/cardapio.html">Cardápio</a></li>
+        <li><a href="pages/lojas.html">Lojas</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Informações</h3>
+      <ul>
+        <li><a href="pages/blog.html">Blog</a></li>
+        <li><a href="pages/contato.html">Contato</a></li>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Termos de uso</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contato</h3>
+      <p>(11) 99999-9999</p>
+      <p>contato@cafearoma.com.br</p>
+      <p>São Paulo - SP</p>
+    </div>
+
+  </div>
+
+  <div class="container copyright">
+    © 2026 Café Aroma. Projeto fictício desenvolvido para portfólio.
+  </div>
+</footer>
+
+<script src="js/menu.js"></script>
+
+
+</body>
+</html>
