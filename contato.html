@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Café Aroma - Contato.">
+  <title>Contato | Café Aroma</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+
+<header class="header">
+  <div class="container navbar">
+
+    <a href="../index.html" class="logo" aria-label="Café Aroma - página inicial">
+      ☕ CAFÉ AROMA
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <ul class="nav-list" id="main-menu">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre nós</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="lojas.html">Lojas</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a class="btn btn-primary" href="cardapio.html">Peça agora</a></li>
+      </ul>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      aria-controls="main-menu"
+      aria-expanded="false"
+      aria-label="Abrir menu">
+      ☰
+    </button>
+
+  </div>
+</header>
+
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contato</h1>
+      <p class="breadcrumb">Início / Contato</p>
+    </div>
+  </section>
+
+
+<section class="section">
+
+  <div class="container contact-grid">
+
+    <aside class="contact-info">
+
+      <h2>Fale com a gente</h2>
+
+      <p>Estamos prontos para atender você.</p>
+
+      <div class="contact-item">
+        <strong>Telefone</strong>
+        (11) 99999-9999
+      </div>
+
+      <div class="contact-item">
+        <strong>E-mail</strong>
+        contato@cafearoma.com.br
+      </div>
+
+      <div class="contact-item">
+        <strong>Horário</strong>
+        Seg a Sáb, 8h às 20h
+      </div>
+
+    </aside>
+
+    <!-- Formulário sem backend: neste projeto ele é apenas demonstrativo. -->
+    <form class="form">
+
+      <div>
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+      </div>
+
+      <div>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="seu@email.com" required>
+      </div>
+
+      <div>
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto">
+          <option>Dúvida</option>
+          <option>Sugestão</option>
+          <option>Atendimento</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        Enviar mensagem
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h3>☕ Café Aroma</h3>
+      <p>Mais que café, momentos que ficam.</p>
+    </div>
+
+    <div>
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre nós</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="lojas.html">Lojas</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Informações</h3>
+      <ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Termos de uso</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contato</h3>
+      <p>(11) 99999-9999</p>
+      <p>contato@cafearoma.com.br</p>
+      <p>São Paulo - SP</p>
+    </div>
+
+  </div>
+
+  <div class="container copyright">
+    © 2026 Café Aroma. Projeto fictício desenvolvido para portfólio.
+  </div>
+</footer>
+
+<script src="js/menu.js"></script>
+
+
+</body>
+</html>

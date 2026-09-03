@@ -1,0 +1,684 @@
+
+/* =========================================================
+   CAFÉ AROMA
+   Folha de estilos principal
+   Projeto de portfólio - HTML + CSS
+   ========================================================= */
+
+/* ---------- CORES E CONFIGURAÇÕES GERAIS ---------- */
+:root {
+  --marrom-escuro: #2f1b12;
+  --marrom: #6f4528;
+  --dourado: #b8874a;
+  --creme: #f8f1e7;
+  --branco: #fffdf9;
+  --texto: #2a211d;
+  --texto-claro: #6e625b;
+  --borda: #e7ddd1;
+  --sombra: 0 10px 30px rgba(47, 27, 18, 0.08);
+  --raio: 14px;
+}
+
+/* Remove margens padrão e facilita o controle dos elementos. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Rolagem suave ao clicar em links internos. */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: var(--branco);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto;
+}
+
+/* =========================================================
+   CABEÇALHO / MENU
+   ========================================================= */
+
+.header {
+  background: var(--marrom-escuro);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-list a {
+  font-size: 0.92rem;
+  transition: 0.2s;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: #e0b875;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Botões reutilizáveis em todo o projeto. */
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--dourado);
+  color: white;
+}
+
+.btn-outline {
+  border: 1px solid var(--dourado);
+  color: var(--marrom);
+  background: transparent;
+}
+
+/* =========================================================
+   HOME / HERO
+   ========================================================= */
+
+/*
+  Como você pediu o projeto SEM imagens, o hero utiliza
+  apenas gradientes CSS. Depois podemos trocar o fundo
+  por uma imagem, se você quiser.
+*/
+.hero {
+  background-image: url("../img/baneer.jpg");
+  background-size: cover;
+  background-position:center left;
+  background-repeat: no-repeat;
+  min-height: 650px;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 680px;
+  padding-block: 100px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: #e0b875;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 1.05;
+  margin: 15px 0 24px;
+}
+
+.hero p {
+  max-width: 580px;
+  color: #f5eee7;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
+
+.section {
+  padding: 90px 0;
+}
+
+.section-alt {
+  background: var(--creme);
+}
+
+.section-title {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 45px;
+}
+
+.section-title h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: var(--texto-claro);
+}
+
+/* Sistema de colunas reutilizável. */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.card-content {
+  padding: 22px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  font-family: Georgia, serif;
+}
+
+.card p {
+  color: var(--texto-claro);
+  font-size: 0.94rem;
+}
+
+/* =========================================================
+   DIFERENCIAIS
+   ========================================================= */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: -55px;
+  position: relative;
+  z-index: 2;
+}
+
+.feature {
+  background: var(--branco);
+  padding: 25px;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  text-align: center;
+  border: 1px solid var(--borda);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.feature p {
+  color: var(--texto-claro);
+  font-size: 0.86rem;
+}
+
+/* =========================================================
+   BLOCOS COM DUAS COLUNAS
+   ========================================================= */
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+/* Caixa visual feita somente com CSS, substituindo imagem. */
+.visual-placeholder {
+  min-height: 380px;
+  border-radius: var(--raio);
+  background-image: url("../img/coofe.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  place-items: center;
+  box-shadow: var(--sombra);
+  padding: 30px;
+}
+
+.split h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 12px 0 18px;
+}
+
+/* =========================================================
+   PRODUTOS
+   ========================================================= */
+
+/* Placeholder visual dos produtos, sem arquivos de imagem. */
+#product-express {
+  min-height: 230px;
+  display: grid;
+  place-items: center;
+ background-image: url("../img/Express.jpg");
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+  color: white;
+  font-size: 3rem;
+}
+
+ #product-cold{ min-height: 230px;
+  display: grid;
+  place-items: center;
+ background-image: url("../img/cold.jpg");
+ background-size: cover;
+ background-position: center bottom;
+ background-repeat: no-repeat;
+  color: white;
+  font-size: 3rem;
+ }
+
+
+ #product-capuccino{ 
+  min-height: 230px;
+  display: grid;
+ background-image: url("../img/capuccino.jpg");
+ background-size: cover;
+ background-position:center center;
+ background-repeat: no-repeat;
+  color: white;
+  font-size: 3rem;
+ }
+  
+ #product-mocha{ 
+  min-height: 230px;
+  display: grid;
+  place-items: center;
+ background-image: url("../img/mochaa.jpg");
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+  color: white;
+  font-size: 3rem;
+ }
+
+.price {
+  display: block;
+  color: var(--marrom);
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+/* =========================================================
+   PÁGINAS INTERNAS
+   ========================================================= */
+
+.page-hero {
+  padding: 85px 0;
+  color: white;
+  background:
+    radial-gradient(circle at 80% 40%, rgba(184, 135, 74, 0.45), transparent 25%),
+    linear-gradient(135deg, #4a2b1b, #1f120c);
+}
+
+.page-hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.breadcrumb {
+  margin-top: 8px;
+  color: #eadfd4;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   CARDÁPIO
+   ========================================================= */
+
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.filter {
+  padding: 9px 16px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  background: white;
+  cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+  background: var(--marrom);
+  color: white;
+}
+
+/* =========================================================
+   LOJAS
+   ========================================================= */
+
+.store-card {
+  padding: 24px;
+}
+
+.store-card h3 {
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.store-card p {
+  color: var(--texto-claro);
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   BLOG
+   ========================================================= */
+
+.post-visual {
+  min-height: 210px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #d8ad76, #6f4528);
+  color: white;
+  font-size: 2.5rem;
+}
+
+.post-meta {
+  font-size: 0.78rem;
+  color: var(--dourado);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   CONTATO
+   ========================================================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 45px;
+}
+
+.contact-info {
+  background: var(--marrom-escuro);
+  color: white;
+  border-radius: var(--raio);
+  padding: 35px;
+}
+
+.contact-info h2 {
+  font-family: Georgia, serif;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  margin-top: 22px;
+}
+
+.contact-item strong {
+  display: block;
+  color: #e0b875;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.form label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: white;
+  outline: none;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  border-color: var(--dourado);
+  box-shadow: 0 0 0 3px rgba(184, 135, 74, 0.15);
+}
+
+.form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+  background: var(--marrom-escuro);
+  color: white;
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.cta h2 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.footer {
+  background: #1f130d;
+  color: white;
+  padding: 55px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 35px;
+  padding-bottom: 35px;
+}
+
+.footer h3 {
+  margin-bottom: 14px;
+  font-family: Georgia, serif;
+}
+
+.footer p,
+.footer a {
+  color: #d8cbc0;
+  font-size: 0.9rem;
+}
+
+.footer ul {
+  list-style: none;
+  display: grid;
+  gap: 7px;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 18px;
+  text-align: center;
+  color: #bbaea4;
+  font-size: 0.8rem;
+}
+
+/* =========================================================
+   PÁGINA 404
+   ========================================================= */
+
+.error-page {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.error-page strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: clamp(6rem, 18vw, 12rem);
+  color: var(--marrom);
+  line-height: 1;
+}
+
+.error-page h1 {
+  margin: 15px 0;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  /*
+    No tablet/celular o menu normal desaparece
+    e o botão "hambúrguer" aparece.
+  */
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: var(--marrom-escuro);
+    padding: 25px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .grid-4,
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 65px 0;
+  }
+
+  /* Uma coluna no celular facilita a leitura. */
+  .split,
+  .contact-grid,
+  .grid-3,
+  .grid-4,
+  .features,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    margin-top: 25px;
+  }
+
+  .hero {
+    min-height: 570px;
+  }
+
+  .hero-content {
+    padding-block: 70px;
+  }
+
+  .actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
